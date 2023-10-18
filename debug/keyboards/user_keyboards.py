@@ -1,12 +1,12 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-import sql
-from config import MANUAL_LINK, SUPPORT
+import database
+from misc.config import MANUAL_LINK, SUPPORT
 
 #клавиатура со списком проектов
 #action - назначение клавиатуры (просмотр, удаление)
 async def hyip_list_keyboard(action, user_id, message_id):
     
-    projects = sql.get_hyip_projects()
+    projects = database.get_hyip_projects()
 
     #все в столбик
     keyboard = InlineKeyboardMarkup(row_width=1)

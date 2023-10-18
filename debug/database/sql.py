@@ -1,5 +1,5 @@
 import sqlite3
-from config import DB
+from misc.config import DB
 
 #sql запросы
 def set_status(user_id, status):
